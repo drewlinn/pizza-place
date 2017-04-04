@@ -9,32 +9,60 @@
   </head>
   <body>
     <div class="container">
-      <h1>Uncle Louie's Old Fashioned Pizza</h1>
-      <div class="intro">
-        <p>Welcome to Uncle Louie's Old Fashioned Pizza! We only serve the most delicious pizza with the highest quality ingredients. If you aren't satisfied with our product, we offer a %100 money-back guarantee.</p>
+      <div class="jumbotron">
+        <h1>Uncle Louie's Old Fashioned Pizza</h1>
+        <div class="intro">
+          <p><em>Welcome to Uncle Louie's Old Fashioned Pizza! We only serve the most delicious pizza with the highest quality ingredients. If you aren't satisfied with our product, we offer a %100 money-back guarantee.</em></p>
+        </div>
       </div>
-      <p>Would you like to order one of our...</p>
-      <h2>Signature Pizzas</h2>
-      <p>Or would you like to...</p>
       <h2>Build your own Pizza!</h2>
       <form id="byopizza">
         <div class="form-group">
-          <div class ="row">
+          <div class="row">
             <div class="col-md-6">
               <h3>Step 1</h3>
               <br>
-              <p>Spreads</p>
-              <input type="checkbox" name="spreads" value="marinara">Marinara <br>
-              <input type="checkbox" name="spreads" value="pesto">Basil Pesto <br>
-              <input type="checkbox" name="spreads" value="olive-oil">Olive Oil <br>
-              <input type="checkbox" name="spreads" value="BBQsauce">Barbecue Sauce <br>
-              <input type="checkbox" name="spreads" value="buffalo">Buffalo Sauce <br>
-              <input type="checkbox" name="spreads" value="alfredo">Alfredo Sauce <br>
+              <p>Choose your pizza size!</p>
+              <input type="checkbox" name"size" value="personal">9" Personal Pizza ($9.00)<br>
+              <input type="checkbox" name"size" value="small">12" Small Pizza ($12.00)<br>
+              <input type="checkbox" name"size" value="medium">16" Medium Pizza ($16.00)<br>
+              <input type="checkbox" name"size" value="calzone">20" Large Pizza ($20.00)<br>
             </div>
+            <div class="col-md-6">
+              <h3>Step 2</h3>
+              <br>
+              <p>Choose your crust style!</p>
+              <input type="checkbox" name="crust" value="classic">Classic<br>
+              <input type="checkbox" name="crust" value="newyork">New York Style<br>
+              <input type="checkbox" name="crust" value="deepdish">Deep Dish<br>
+            </div>
+          </div>
+          <div class ="row">
             <div class="col-md-6">
               <h3>Step 3</h3>
               <br>
-              <p>Meats</p>
+              <p>Spreads</p>
+              <input type="checkbox" name="spreads" value="marinara">Marinara <br>
+              <input type="checkbox" name="spreads" value="olive-oil">Olive Oil <br>
+              <input type="checkbox" name="spreads" value="pesto">Basil Pesto (+$1.00)<br>
+              <input type="checkbox" name="spreads" value="BBQsauce">Barbecue Sauce (+$1.00) <br>
+              <input type="checkbox" name="spreads" value="buffalo">Buffalo Sauce (+$1.00)<br>
+              <input type="checkbox" name="spreads" value="alfredo">Alfredo Sauce (+$1.00)<br>
+            </div>
+            <div class="col-md-6">
+              <h3>Step 4</h3>
+              <br>
+              <p>Cheeses</p>
+              <input type="checkbox" name="cheeses" value="mozzarella">Mozzarella<br>
+              <input type="checkbox" name="cheeses" value="mozzarella-fresh">Fresh Mozzarella<br>
+              <input type="checkbox" name="cheeses" value="vegan-chz">Vegan Cashew Cheese<br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h3>Step 5</h3>
+              <br>
+              <p>Meats  ($2.00 each)</p>
               <input type="checkbox" name="meats" value="pepperoni">Pepperoni<br>
               <input type="checkbox" name="meats" value="salami">Salami<br>
               <input type="checkbox" name="meats" value="chicken">Chicken<br>
@@ -43,21 +71,10 @@
               <input type="checkbox" name="meats" value="bacon">Bacon<br>
               <input type="checkbox" name="meats" value="vegan-meat">Vegan Meat Alternative <br>
             </div>
-          </div>
-          <div class="row">
             <div class="col-md-6">
-              <h3>Step 2</h3>
+              <h3>Step 6</h3>
               <br>
-              <p>Cheeses</p>
-              <input type="checkbox" name="cheeses" value="mozzarella">Mozzarella<br>
-              <input type="checkbox" name="cheeses" value="mozzarella-fresh">Fresh Mozzarella<br>
-              <input type="checkbox" name="cheeses" value="parmesan">Parmesan<br>
-              <input type="checkbox" name="cheeses" value="vegan-chz">Vegan Cashew Cheese<br>
-            </div>
-            <div class="col-md-6">
-              <h3>Step 4</h3>
-              <br>
-              <p>Veggies</p>
+              <p>Veggies  ($1.00 each)</p>
               <input type="checkbox" name="veggies" value="olive">Black Olives<br>
               <input type="checkbox" name="veggies" value="kalamata">Kalamata Olives<br>
               <input type="checkbox" name="veggies" value="redonion">Red Onions<br>
@@ -76,7 +93,7 @@
             </div>
           </div>
         </div>
-       <button type="submit">Build my pizza!</button>
+       <button type="submit">Add to cart.</button>
       </form>
     </div>
   </body>
