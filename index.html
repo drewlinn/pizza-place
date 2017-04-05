@@ -12,7 +12,7 @@
       <div class="jumbotron">
         <h1>Uncle Louie's Old Fashioned Pizza</h1>
         <div class="intro">
-          <p><em>Welcome to Uncle Louie's Old Fashioned Pizza! We only serve the most delicious pizza with the highest quality ingredients. If you aren't satisfied with our product, we offer a %100 money-back guarantee.</em></p>
+          <p><em>Welcome to Uncle Louie's Old Fashioned Pizza! We only serve the most delicious pizza with the highest quality ingredients. If you aren't %100 satisfied with our product, we offer a money-back guarantee.</em></p>
         </div>
       </div>
       <h2>Build your own Pizza!</h2>
@@ -23,78 +23,78 @@
               <h3>Step 1</h3>
               <br>
               <p>Choose your pizza size!</p>
-              <input type="checkbox" name"size" value="personal">9" Personal Pizza ($9.00)<br>
-              <input type="checkbox" name"size" value="small">12" Small Pizza ($12.00)<br>
-              <input type="checkbox" name"size" value="medium">16" Medium Pizza ($16.00)<br>
-              <input type="checkbox" name"size" value="calzone">20" Large Pizza ($20.00)<br>
+              <select class="form-control" id="measure">
+                <option value="9in">9" Personal Pizza ($9.00)</option>
+                <option value="12in">12" Small Pizza ($12.00)</option>
+                <option value="16in">16" Medium Pizza ($16.00)</option>
+                <option value="20in">20" Large Pizza ($20.00)</option>
+              </select>
             </div>
             <div class="col-md-6">
               <h3>Step 2</h3>
               <br>
-              <p>Choose your crust style!</p>
-              <input type="checkbox" name="crust" value="classic">Classic<br>
-              <input type="checkbox" name="crust" value="newyork">New York Style<br>
-              <input type="checkbox" name="crust" value="deepdish">Deep Dish<br>
-            </div>
-          </div>
-          <div class ="row">
-            <div class="col-md-6">
-              <h3>Step 3</h3>
-              <br>
               <p>Spreads</p>
-              <input type="checkbox" name="spreads" value="marinara">Marinara <br>
-              <input type="checkbox" name="spreads" value="olive-oil">Olive Oil <br>
-              <input type="checkbox" name="spreads" value="pesto">Basil Pesto (+$1.00)<br>
-              <input type="checkbox" name="spreads" value="BBQsauce">Barbecue Sauce (+$1.00) <br>
-              <input type="checkbox" name="spreads" value="buffalo">Buffalo Sauce (+$1.00)<br>
-              <input type="checkbox" name="spreads" value="alfredo">Alfredo Sauce (+$1.00)<br>
-            </div>
-            <div class="col-md-6">
-              <h3>Step 4</h3>
-              <br>
-              <p>Cheeses</p>
-              <input type="checkbox" name="cheeses" value="mozzarella">Mozzarella<br>
-              <input type="checkbox" name="cheeses" value="mozzarella-fresh">Fresh Mozzarella<br>
-              <input type="checkbox" name="cheeses" value="vegan-chz">Vegan Cashew Cheese<br>
+              <select class="form-control" id="spreads">
+                <option>Marinara</option>
+                <option>Olive Oil</option>
+                <option>Truffle Oil</option>
+                <option>Basil Pesto</option>
+                <option>Barbecue Sauce</option>
+                <option>Buffalo Sauce</option>
+                <option>Alfredo Sauce</option>
+              </select>
             </div>
           </div>
           <div class="row">
-            <div class="col-md-6">
-              <h3>Step 5</h3>
+            <h3>Step 3</h3>
+            <p>Choose your spread, cheese, and toppings!</p>
+            <div class="col-md-4">
               <br>
-              <p>Meats  ($2.00 each)</p>
-              <input type="checkbox" name="meats" value="pepperoni">Pepperoni<br>
-              <input type="checkbox" name="meats" value="salami">Salami<br>
-              <input type="checkbox" name="meats" value="chicken">Chicken<br>
-              <input type="checkbox" name="meats" value="prosciutto">Prosciutto<br>
-              <input type="checkbox" name="meats" value="ham">Ham<br>
-              <input type="checkbox" name="meats" value="bacon">Bacon<br>
-              <input type="checkbox" name="meats" value="vegan-meat">Vegan Meat Alternative <br>
+              <p>Cheeses</p>
+              <input type="checkbox" name="cheeses" value="Mozzarella">Shredded Mozzarella<br>
+              <input type="checkbox" name="cheeses" value="Mozzarella-Fresh">Fresh Mozzarella<br>
+              <input type="checkbox" name="cheeses" value="Vegan-Cheese">Vegan Cheese<br>
             </div>
-            <div class="col-md-6">
-              <h3>Step 6</h3>
+            <div class="col-md-4">
+              <br>
+              <p>Meats  ($1.00 each)</p>
+              <input type="checkbox" name="toppings" value="Pepperoni">Pepperoni<br>
+              <input type="checkbox" name="toppings" value="Salami">Salami<br>
+              <input type="checkbox" name="toppings" value="Chicken">Chicken<br>
+              <input type="checkbox" name="toppings" value="Prosciutto">Prosciutto<br>
+              <input type="checkbox" name="toppings" value="Ham">Ham<br>
+              <input type="checkbox" name="toppings" value="Bacon">Bacon<br>
+              <input type="checkbox" name="toppings" value="Vegan-Meat">Vegan Meat Alternative <br>
+            </div>
+            <div class="col-md-4">
               <br>
               <p>Veggies  ($1.00 each)</p>
-              <input type="checkbox" name="veggies" value="olive">Black Olives<br>
-              <input type="checkbox" name="veggies" value="kalamata">Kalamata Olives<br>
-              <input type="checkbox" name="veggies" value="redonion">Red Onions<br>
-              <input type="checkbox" name="veggies" value="grilledonion">Grilled Onions<br>
-              <input type="checkbox" name="veggies" value="bellpepper">Bell Peppers<br>
-              <input type="checkbox" name="veggies" value="rstdreds">Roasted Red Peppers<br>
-              <input type="checkbox" name="veggies" value="mushroom">White Button Mushrooms<br>
-              <input type="checkbox" name="veggies" value="portabella">Grilled Portabella Mushrooms<br>
-              <input type="checkbox" name="veggies" value="tomato">Fresh Tomatoes<br>
-              <input type="checkbox" name="veggies" value="rstdtom">Roasted Tomatoes<br>
-              <input type="checkbox" name="veggies" value="mamalil">Mama Lil's Peppers<br>
-              <input type="checkbox" name="veggies" value="pepperoncini">Pepperoncinis<br>
-              <input type="checkbox" name="veggies" value="jalapeno">Jalapenos<br>
-              <input type="checkbox" name="veggies" value="artheart">Artichoke Hearts<br>
-              <input type="checkbox" name="veggies" value="pineapple">Pineapple<br>
+              <input type="checkbox" name="toppings" value="Basil">Fresh Basil<br>
+              <input type="checkbox" name="toppings" value="FreshGarlic">Fresh Garlic<br>
+              <input type="checkbox" name="toppings" value="RstdGarlic">Roasted Garlic<br>
+              <input type="checkbox" name="toppings" value="Olive">Black Olives<br>
+              <input type="checkbox" name="toppings" value="Kalamata">Kalamata Olives<br>
+              <input type="checkbox" name="toppings" value="Red-Onion">Red Onions<br>
+              <input type="checkbox" name="toppings" value="Grilled-Onion">Grilled Onions<br>
+              <input type="checkbox" name="toppings" value="Bell-Pepper">Bell Peppers<br>
+              <input type="checkbox" name="toppings" value="Roasted-Red-Pepper">Roasted Red Peppers<br>
+              <input type="checkbox" name="toppings" value="Mushroom">White Button Mushrooms<br>
+              <input type="checkbox" name="toppings" value="Portabella">Grilled Portabella Mushrooms<br>
+              <input type="checkbox" name="toppings" value="Tomato">Fresh Tomatoes<br>
+              <input type="checkbox" name="toppings" value="Roasted-Tomato">Roasted Tomatoes<br>
+              <input type="checkbox" name="toppings" value="Mama-Lils">Mama Lil's Peppers<br>
+              <input type="checkbox" name="toppings" value="Pepperoncini">Pepperoncinis<br>
+              <input type="checkbox" name="toppings" value="Jalapeno">Jalapenos<br>
+              <input type="checkbox" name="toppings" value="Artichoke-Heart">Artichoke Hearts<br>
+              <input type="checkbox" name="toppings" value="Pineapple">Pineapple<br>
             </div>
           </div>
         </div>
        <button type="submit">Add to cart.</button>
       </form>
+      <div id="yourCart">
+
+      </div>
     </div>
   </body>
 </html>
