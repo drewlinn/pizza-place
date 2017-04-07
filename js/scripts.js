@@ -1,16 +1,19 @@
 //business logic
 
-// var yourOrder = [];
-// var orderTotal = {};
 function Pizza (inches, spread, cheese, vegToppings, meatToppings)  {
-  this.inches = inches;
-  this.spread = spread;
-  this.cheese = cheese;
-  this.vegToppings = vegToppings;
+  this.inches = inches,
+  this.spread = spread,
+  this.cheese = cheese,
+  this.vegToppings = vegToppings,
   this.meatToppings = meatToppings;
 };
 
-var getPrice = function() {
+function yourOrder (pizza)  {
+  this.pizza = [];
+};
+
+
+Pizza.prototype.price = function(inches, spread, vegToppings, meatToppings)  {
   var price = 0;
   if (inches === "9in") {
     price = price += 9.00;
@@ -35,19 +38,14 @@ var getPrice = function() {
 return price;
 };
 
-// Pizza.prototype.price = function()  {
-//   getPrice(yourPizza);
-//   return this.price;
-// };
-
-
-//can't get getPrice function to properly interact with variables in user interface. :(
+yourOrder.prototype.total = function(pizza, price)  {
+  return pizza + price;
+};
 
 //user interface logic
 $(document).ready(function(event){
   $("form#byopizza").submit(function(event){
     event.preventDefault();
-
       var inches = $("#inches").val();
       var spread = $("#spreads").val();
       var cheese = $("#cheeses").val();
@@ -62,10 +60,7 @@ $(document).ready(function(event){
         meatToppings.push(meatSelection);
       });
       var newPizza = new Pizza (inches, spread, cheese, vegToppings, meatToppings);
-      var yourPizza = newPizza;
-      var price = getPrice(newPizza);
-
-
+      var price = newPizza.price(inches, spread, vegToppings, meatToppings);
   });
   $("ul#yourOrder").append("<li>" + yourOrder + "</li>");
 });
