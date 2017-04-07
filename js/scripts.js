@@ -8,11 +8,6 @@ function Pizza (inches, spread, cheese, vegToppings, meatToppings)  {
   this.meatToppings = meatToppings;
 };
 
-function yourOrder (pizza)  {
-  this.pizza = [];
-};
-
-
 Pizza.prototype.price = function(inches, spread, vegToppings, meatToppings)  {
   var price = 0;
   if (inches === "9in") {
@@ -38,29 +33,25 @@ Pizza.prototype.price = function(inches, spread, vegToppings, meatToppings)  {
 return price;
 };
 
-yourOrder.prototype.total = function(pizza, price)  {
-  return pizza + price;
-};
-
 //user interface logic
 $(document).ready(function(event){
   $("form#byopizza").submit(function(event){
     event.preventDefault();
-      var inches = $("#inches").val();
-      var spread = $("#spreads").val();
-      var cheese = $("#cheeses").val();
-      var vegToppings = [];
-      $("input:checkbox[name=veggies]:checked").each(function(){
-        var vegSelection = $(this).val();
-        vegToppings.push(vegSelection);
-      });
-      var meatToppings = [];
-      $("input:checkbox[name=meats]:checked").each(function(){
-        var meatSelection = $(this).val();
-        meatToppings.push(meatSelection);
-      });
-      var newPizza = new Pizza (inches, spread, cheese, vegToppings, meatToppings);
-      var price = newPizza.price(inches, spread, vegToppings, meatToppings);
+    var inches = $("#inches").val();
+    var spread = $("#spreads").val();
+    var cheese = $("#cheeses").val();
+    var vegToppings = [];
+    $("input:checkbox[name=veggies]:checked").each(function(){
+      var vegSelection = $(this).val();
+      vegToppings.push(vegSelection);
+    });
+    var meatToppings = [];
+    $("input:checkbox[name=meats]:checked").each(function(){
+      var meatSelection = $(this).val();
+      meatToppings.push(meatSelection);
+    });
+    var newPizza = new Pizza (inches, spread, cheese, vegToppings, meatToppings);
+    var price = newPizza.price(inches, spread, vegToppings, meatToppings);
+    $("ul#yourOrder").append("<li>" + newPizza.inches + ", " + newPizza.spread + ", " + newPizza.cheese + ", " + newPizza.vegToppings + ", " + newPizza.meatToppings + ", " + "$" + price + "</li>");
   });
-  $("ul#yourOrder").append("<li>" + yourOrder + "</li>");
 });
